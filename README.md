@@ -1,237 +1,201 @@
-# Personal Portfolio Website
+# Subhadip Gupta - Portfolio Website
 
-A modern, responsive portfolio website to showcase your CV and projects.
+A premium, animated portfolio website showcasing frontend development expertise with React.js specialization.
+
+🌐 **Live Site**: [https://subhadipgupta03.github.io](https://subhadipgupta03.github.io)
 
 ## ✨ Features
 
-✅ **Responsive Design** - Works perfectly on desktop, tablet, and mobile  
-✅ **Modern UI** - Beautiful gradient hero section and smooth animations  
-✅ **All Sections Included** - Home, About, Skills, Projects, CV, Contact  
-✅ **Easy Customization** - Simple to modify with your own content  
-✅ **Fast Loading** - Lightweight HTML, CSS, and JavaScript  
-✅ **Mobile Friendly** - Mobile menu included  
+✅ **3D Particle Background** - Canvas API with 100 animated particles and depth effects  
+✅ **Animated Gradient Text** - Flowing gradient animations on hero section with typewriter effect  
+✅ **Dark/Light Mode** - Seamless theme toggle with localStorage persistence  
+✅ **Premium Animations** - Scroll reveals, card tilts, hover effects, staggered animations  
+✅ **Web Audio API** - Interactive sound effects on user interactions  
+✅ **Custom Cursor** - Animated custom cursor following mouse movement  
+✅ **Fully Responsive** - Optimized layouts for desktop, tablet, and mobile (768px, 480px breakpoints)  
+✅ **Interactive Components** - Animated counters, gradient shifts, pulse effects  
+✅ **Modern Tech Stack** - Vanilla JavaScript with ES6+, CSS3 animations, HTML5 semantic markup  
+✅ **Icon Integration** - Font Awesome 6.4.0 for comprehensive iconography  
 
 ## 📁 File Structure
 
 ```
 WEBSITE/
-├── index.html          # Main HTML file
-├── style.css           # All styling
-├── script.js           # JavaScript functionality
-├── assets/             # Folder for images and documents
-│   ├── profile.jpg     # Your profile picture (300x300px)
-│   ├── project1.jpg    # Project image 1
-│   ├── project2.jpg    # Project image 2
-│   ├── project3.jpg    # Project image 3
-│   └── CV.pdf          # Your CV/Resume PDF
-└── README.md           # This file
+├── index.html                      # Main HTML (410 lines)
+├── css/
+│   └── style.css                   # All styling (2200+ lines)
+├── js/
+│   └── script.js                   # JavaScript functionality (580+ lines)
+├── assets/
+│   ├── files/
+│   │   └── CV.pdf                  # Resume download
+│   └── images/
+│       ├── profile.jpg             # Profile photo (optional)
+│       ├── project1.jpg            # Wicketly.ai screenshot
+│       └── portfolio-logo.svg      # Futuristic tech badge
+└── README.md                       # This file
 ```
 
-## 🚀 Quick Start
+## 🎯 Portfolio Sections
 
-### Step 1: Open Website Locally
-1. Open `index.html` in your web browser
-2. You'll see the portfolio template with placeholders
+### 1. **Hero Section**
+- Animated gradient name with flowing colors (gradientFlow animation)
+- Typewriter effect subtitle with blinking cursor
+- 3D particle canvas background (100 particles with mouse interaction)
+- Call-to-action buttons with hover effects
+- Social links with backdrop blur
 
-### Step 2: Customize Your Information
-Edit `index.html` and replace:
-- `[Your Name]` → Your actual name
-- `Full Stack Developer | Designer | Problem Solver` → Your headline
-- Your bio, skills, projects, education, experience
+### 2. **About Section**
+- Personality-rich introduction with emojis (👋💙🚀🎯)
+- React passion explanation
+- Three stat cards displaying:
+  - Projects Completed: 2
+  - B.Tech CGPA: 7.1 (highlighted)
+  - Graduation: May 2026 (split display)
+- Staggered fade-in animations
+- Radial gradient glow on hover
 
-### Step 3: Add Your Images
-Create an `assets/` folder and add:
-- `profile.jpg` - Your photo (300x300px, square)
-- `project1.jpg`, `project2.jpg`, `project3.jpg` - Project screenshots
-- `CV.pdf` - Your resume/CV file
+### 3. **Skills & Expertise**
+- **Frontend Mastery**: React.js ⭐, Tailwind CSS ⭐ (featured with pulse), JavaScript, HTML/CSS, Responsive Design
+- **Backend & APIs**: Python, FastAPI, Java, REST APIs
+- **Tools & Soft Skills**: Git/GitHub, VS Code, Jupyter Notebook, Problem Solving, Team Collaboration, Quick Learner
+- Popup animations on skill cards
+- Featured tags with special styling
 
-### Step 4: Update Links
-Replace placeholder links with:
-- Email: `mailto:your.email@example.com`
-- Phone: `tel:+1234567890`
-- Social links: GitHub, LinkedIn, Twitter URLs
+### 4. **Projects**
+- **Wicketly.ai**: Cricket analytics platform with ML predictions
+  - Tech: React.js, FastAPI, Machine Learning
+  - Status: "Coming Soon" badge with spinning clock icon
+  - GitHub link available
+- **Personal Portfolio**: Current website
+  - Tech: HTML, CSS, JavaScript
+  - "View Live" button + GitHub link
 
-## 🎨 How to Customize
+### 5. **Achievements & Recognition**
+- Oracle Cloud Infrastructure AI Foundations Associate (April 2025)
+- Active GitHub Developer with consistent contributions
+- Hackathon Ready with competitive coding experience
+- Circular gradient icons with hover lift effects
 
-### Update Your Name & Title (index.html)
-```html
-<h1>Hi, I'm [Your Name]</h1>
-<p class="subtitle">Your Profession | Your Title | Your Focus</p>
-```
+### 6. **Blog Section** (Placeholder)
+- "Blog Coming Soon!" card
+- Planned topics preview
+- Dashed border styling with gradient backgrounds
 
-### Add Profile Picture
-- Save a square photo as `profile.jpg` in `assets/` folder
-- Photo should be at least 300x300px
-- Website will display it automatically
+### 7. **Education & Certifications**
+- **B.Tech in Computer Science Engineering (AI & ML)**
+  - Asansol Engineering College, West Bengal
+  - 2023 - 2026
+  - CGPA: 7.1 (gradient highlighted)
+- **Diploma in Electrical Engineering**
+  - The New Horizons Institute of Technology
+  - 2020 - 2023
+- **Oracle Certification**
+  - Oracle Cloud Infrastructure – AI Foundations Associate
+  - April 2025 (featured date badge)
+- Date badges with gradient backgrounds (purple, orange for featured, green for current)
+- Corner accent decorations on cards
+- Institution labels with icons
 
-### Update About Section
-Find this section and replace with your real information:
-```html
-<p>I'm a passionate developer with [X] years of experience...</p>
-<p>My journey started with [brief background]...</p>
-<p>When I'm not coding, you can find me [hobbies]...</p>
-```
+### 8. **Contact Section**
+- Compelling hook: "Let's Build Something Amazing Together"
+- Quick response badges with social proof (24hrs, GitHub active, Professional network)
+- **Availability & FAQ Cards**:
+  - Preferred Roles: Frontend Developer (React), UI Engineer, Web Developer
+  - Location: West Bengal, India • Open to remote
+  - Start Date: Available immediately after graduation (May 2026)
+- Contact information: Email, Phone, Location, GitHub, LinkedIn
+- Contact form (frontend only)
 
-### Update Statistics
-Change numbers and labels:
-```html
-<div class="stat">
-    <h3>10+</h3>          <!-- Change this number -->
-    <p>Projects Completed</p>  <!-- Change this label -->
-</div>
-```
+## 🛠️ Tech Stack
 
-### Customize Skills
-Update skill tags:
-```html
-<span class="tag">HTML/CSS</span>
-<span class="tag">JavaScript</span>
-<span class="tag">React</span>
-```
+### Frontend
+- **HTML5**: Semantic markup, accessibility features
+- **CSS3**: 
+  - Custom properties for theming
+  - Flexbox & CSS Grid layouts
+  - Keyframe animations (fadeInUp, gradientFlow, popUp, blink, pulse, spin, subtleGlow)
+  - Dark mode with extensive overrides
+  - Responsive breakpoints (768px, 480px)
+- **JavaScript (ES6+)**:
+  - Canvas API for 3D particle system
+  - Web Audio API for sound effects
+  - LocalStorage for theme persistence
+  - Intersection Observer for scroll animations
+  - Custom cursor tracking
+  - Typewriter effect with recursion
+  - Animated counters with easing
 
-### Add Your Projects
-For each project card, update:
-- Image file in `assets/`
-- Project title and description
-- Technologies used
-- Links to live demo and source code
+### External Libraries
+- **Font Awesome 6.4.0**: Comprehensive icon library
 
-### Add Your CV
-1. Save your resume as `CV.pdf`
-2. Place in `assets/` folder
-3. Download button will work automatically
+### Design System
+**Light Mode Colors:**
+- Primary: #4338ca (deep indigo), #6366f1 (purple)
+- Text: #111827 (nearly black), #1f2937 (dark gray)
+- Background: #ffffff, #f8f9fe (light blue-gray)
 
-### Update Education & Experience
-Replace placeholder with your actual:
-- School/University name and graduation year
-- Company name and job titles
-- Descriptions of achievements
+**Dark Mode Colors:**
+- Primary: #7c3aed (purple), #a78bfa (lavender), #22d3ee (cyan)
+- Text: #f9fafb (near white), #f3f4f6 (light gray), #d1d5db (gray)
+- Background: #0b1020 (dark navy), #0f172a (darker slate)
 
-### Update Contact Information
-```html
-<a href="mailto:your.email@example.com">your.email@example.com</a>
-<a href="tel:+1234567890">+1 (234) 567-890</a>
-```
+## 🎨 Key Animations
 
-### Update Social Links
-```html
-<a href="https://github.com/yourusername" target="_blank">
-<a href="https://linkedin.com/in/yourprofile" target="_blank">
-<a href="https://twitter.com/yourhandle" target="_blank">
-```
+- **gradientFlow** (4s): Flowing gradient text effect
+- **fadeInUp** (0.8s): Entrance animation for sections
+- **popUp** (0.4s): Skill card appearance
+- **blink** (0.7s): Typewriter cursor
+- **pulse** (2s): Featured skill tags
+- **subtleGlow** (3s): Date badges and elements
+- **spin** (2s): Coming Soon clock icon
 
-## 🎨 Colors & Styling
+## 📱 Responsive Design
 
-Main colors in `style.css`:
-```css
---primary-color: #2563eb;      /* Blue */
---secondary-color: #1e40af;    /* Dark Blue */
---text-dark: #1f2937;          /* Dark Gray */
---text-light: #6b7280;         /* Light Gray */
---bg-light: #f9fafb;           /* Very Light Gray */
-```
+- **Desktop** (>768px): Full layout with side-by-side grids
+- **Tablet** (≤768px): Single column layouts, hamburger menu
+- **Mobile** (≤480px): Stack all content, adjusted font sizes, optimized spacing
 
-To change theme colors, edit these values in `style.css`.
+## 🚀 Deployment
 
-## 📸 Image Recommendations
+Deployed on **GitHub Pages** at the custom repository:
+- Repository: `SubhadipGupta03.github.io`
+- Branch: `main`
+- Auto-deploys on push to main branch
 
-| Purpose | Size | Format | Notes |
-|---------|------|--------|-------|
-| Profile | 300x300px | JPG/PNG | Square, professional |
-| Projects | 600x400px | JPG/PNG | Landscape orientation |
-| File Size | <500KB each | JPG/PNG | Keep small for fast loading |
+### Local Development
+1. Clone the repository
+2. Open `index.html` in a browser
+3. No build process required - pure HTML/CSS/JS
 
-## 🌍 Deploy Online (Free Options)
+## 📊 Performance Features
 
-### Option 1: GitHub Pages (Recommended)
-1. Create GitHub account at https://github.com
-2. Create new repository named `yourusername.github.io`
-3. Upload your files to the repository
-4. Visit `https://yourusername.github.io` - Done!
+- Lightweight: No heavy frameworks
+- Fast loading: Optimized images and code
+- Smooth animations: Hardware-accelerated transforms
+- Efficient rendering: requestAnimationFrame for Canvas
+- Theme persistence: LocalStorage caching
 
-### Option 2: Netlify (Super Easy)
-1. Go to https://netlify.com
-2. Drag & drop your website folder
-3. Get a free URL instantly
-4. (Optional) Connect custom domain
+## 👤 About
 
-### Option 3: Vercel (Also Easy)
-1. Go to https://vercel.com
-2. Import your project
-3. Deploy with one click
-4. Get instant URL
+**Subhadip Gupta** - B.Tech Computer Science Engineering (AI & ML) student graduating May 2026. Specialized in frontend development with React.js, passionate about building intuitive and interactive web experiences.
 
-### Option 4: Custom Domain
-1. Buy domain from Namecheap, GoDaddy, Google Domains (~$10/year)
-2. Connect to GitHub Pages, Netlify, or Vercel
-3. Follow platform's domain instructions
+### Contact
+- 📧 Email: subhadipgupta47@gmail.com
+- 📱 Phone: +91-8637018486
+- 💼 LinkedIn: [subhadip-gupta-919b79247](https://www.linkedin.com/in/subhadip-gupta-919b79247/)
+- 🐙 GitHub: [SubhadipGupta03](https://github.com/SubhadipGupta03)
+- 📍 Location: West Bengal, India (Open to remote)
 
-## 🔧 Troubleshooting
+### Education
+- **B.Tech in Computer Science Engineering (AI & ML)** - Asansol Engineering College (2023-2026)
+- **Diploma in Electrical Engineering** - The New Horizons Institute of Technology (2020-2023)
 
-**Images not showing?**
-- Verify files are in `assets/` folder
-- Check filenames match exactly in HTML
-- Ensure formats are JPG or PNG
-
-**PDF download not working?**
-- Check `CV.pdf` is in `assets/` folder
-- Verify filename in HTML matches exactly
-
-**Mobile menu not working?**
-- Clear browser cache (Ctrl+Shift+Delete)
-- Try different browser
-- Check JavaScript is enabled
-
-**Website looks broken?**
-- Check all files are in correct location
-- Try opening in different browser
-- Make sure you're using the latest version
-
-## 💡 Pro Tips
-
-1. **Use professional photos** - Quality images make huge difference
-2. **Keep updated** - Add new projects regularly
-3. **Write descriptions** - Tell story of your work
-4. **Link everything** - Connect all social profiles
-5. **Test on mobile** - Always check on phones
-6. **Get feedback** - Ask friends to review
-7. **SEO** - Add your name to title and description
-8. **Fast loading** - Compress images before uploading
-
-## 📋 Checklist Before Sharing
-
-- [ ] Profile photo added
-- [ ] Your name and title updated
-- [ ] About section filled in
-- [ ] Skills list completed
-- [ ] 3+ projects added with images
-- [ ] Education and experience added
-- [ ] CV/Resume PDF added
-- [ ] Contact information updated
-- [ ] All social links connected
-- [ ] Tested on mobile
-- [ ] Deployed online
-
-## 🎓 Learning Resources
-
-- **HTML Tutorial**: https://www.w3schools.com/html/
-- **CSS Tutorial**: https://www.w3schools.com/css/
-- **JavaScript**: https://www.w3schools.com/js/
-- **Responsive Design**: https://www.w3schools.com/css/css_rwd_intro.asp
-
-## 📞 Need Help?
-
-- Check the comments in HTML for section markers
-- Review this README for customization steps
-- Test in browser after each change
-- Use browser DevTools (F12) to debug
-
-## 📄 License
-
-Free to use and modify for personal purposes.
+### Certifications
+- Oracle Cloud Infrastructure – AI Foundations Associate (April 2025)
 
 ---
 
-**Your professional portfolio is ready!** 🚀
+**Built with ❤️ using HTML, CSS, and JavaScript**
 
-Edit your information, add your images, and share your amazing work with the world!
+🚀 **Live**: [https://subhadipgupta03.github.io](https://subhadipgupta03.github.io)
