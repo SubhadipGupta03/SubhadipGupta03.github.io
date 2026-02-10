@@ -118,6 +118,17 @@ body.dark .skill-category {
     box-shadow: -5px 0 20px rgba(124, 58, 237, 0.3);
 }
 
+body.dark .skill-category:hover {
+    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.5), 
+                0 0 60px rgba(124, 58, 237, 0.3),
+                -5px 0 30px rgba(124, 58, 237, 0.4);
+    border-left-color: #a78bfa;
+}
+
+body.dark .skill-category::before {
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+}
+
 body.dark .skill-category h4 {
     text-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
 }
@@ -304,6 +315,18 @@ html {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(1) rotateY(0deg);
+    }
+    50% {
+        transform: scale(1.08) rotateY(5deg);
+    }
+    100% {
+        transform: scale(1.05) rotateY(0deg);
     }
 }
 
@@ -787,32 +810,37 @@ html {
     padding: 2.5rem;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(99, 102, 241, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
 .skill-category::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: var(--gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .skill-category:hover::before {
-    transform: scaleX(1);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .skill-category:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
+    animation: popUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25), 
+                0 0 40px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
 }
 
 .skill-category h3 {
@@ -820,12 +848,16 @@ html {
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
+    position: relative;
+    z-index: 1;
 }
 
 .tag {
