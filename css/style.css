@@ -136,9 +136,25 @@ body.dark .tag {
     transition: all 0.3s ease;
 }
 
+body.dark .tag.featured {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    border: 2px solid #c4b5fd;
+    box-shadow: 0 0 25px rgba(167, 139, 250, 0.6);
+    animation: pulse 2s ease-in-out infinite;
+}
+
 body.dark .tag:hover {
     box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
     transform: scale(1.05);
+}
+
+body.dark .tag.featured:hover {
+    box-shadow: 0 0 40px rgba(167, 139, 250, 0.9);
+    transform: translateY(-5px) scale(1.1);
+}
+
+body.dark .skill-category h3 i {
+    color: #a78bfa;
 }
 
 body.dark .navbar {
@@ -965,6 +981,14 @@ html {
     font-weight: 700;
     position: relative;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category h3 i {
+    font-size: 1.3rem;
+    color: var(--primary-color);
 }
 
 .skill-tags {
@@ -986,9 +1010,29 @@ html {
     cursor: default;
 }
 
+.tag.featured {
+    background: linear-gradient(135deg, #4338ca, #7c3aed);
+    padding: 0.7rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(67, 56, 202, 0.4);
+    position: relative;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.tag.featured::before {
+    content: '⭐';
+    margin-right: 0.3rem;
+}
+
 .tag:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.tag.featured:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(67, 56, 202, 0.6);
 }
 
 /* Projects Section */
