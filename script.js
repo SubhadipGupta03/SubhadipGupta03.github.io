@@ -18,6 +18,136 @@ navItems.forEach(item => {
     });
 });
 
+// ===== DARK MODE TOGGLE =====
+const themeToggle = document.querySelector('.theme-toggle');
+const body = document.body;
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+// Check for saved theme preference or default to light mode
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    body.classList.add('dark');
+    if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+}
+
+// Toggle theme
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        
+        // Update icon
+        if (themeIcon) {
+            themeIcon.classList.toggle('fa-moon', !isDark);
+            themeIcon.classList.toggle('fa-sun', isDark);
+        }
+        
+        // Save preference
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        
+        // Add click sound effect
+        playClickSound();
+    });
+}
+
+// ===== SOUND EFFECTS =====
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+function playClickSound() {
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.value = 800;
+    oscillator.type = 'sine';
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.1);
+}
+
+function playHoverSound() {
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.value = 600;
+    oscillator.type = 'sine';
+    
+    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.05);
+}
+
+// Add hover sounds to interactive elements
+document.querySelectorAll('.btn, .project-card, .skill-category, .nav-links a').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        playHoverSound();
+    });
+});
+
+// ===== CUSTOM CURSOR =====
+if (window.innerWidth > 768) {
+    const cursorDot = document.createElement('div');
+    const cursorRing = document.createElement('div');
+    cursorDot.className = 'cursor-dot';
+    cursorRing.className = 'cursor-ring';
+    document.body.appendChild(cursorDot);
+    document.body.appendChild(cursorRing);
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        // Smooth follow for dot
+        dotX += (mouseX - dotX) * 0.8;
+        dotY += (mouseY - dotY) * 0.8;
+        
+        // Smooth follow for ring (slower)
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+
+        cursorDot.style.left = dotX + 'px';
+        cursorDot.style.top = dotY + 'px';
+        cursorRing.style.left = ringX + 'px';
+        cursorRing.style.top = ringY + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Scale cursor on hover
+    document.querySelectorAll('a, button, .project-card, .skill-category, .stat').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(2)';
+            cursorRing.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorRing.style.borderColor = 'rgba(99, 102, 241, 0.9)';
+        });
+        element.addEventListener('mouseleave', () => {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorRing.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorRing.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+        });
+    });
+}
+
 // Smooth Scrolling with offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -63,11 +193,9 @@ const revealOnScroll = () => {
     });
 };
 
-// Initial check and scroll listener
 revealOnScroll();
 window.addEventListener('scroll', revealOnScroll);
 
-// Add reveal class to elements
 revealElements.forEach((el, index) => {
     el.classList.add('reveal');
     el.style.transitionDelay = `${index * 0.1}s`;
@@ -95,15 +223,13 @@ if (subtitle) {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
+    if (heroContent && scrolled < 600) {
         heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / 600);
+        heroContent.style.opacity = Math.max(0.2, 1 - (scrolled / 600));
     }
 });
 
 // Animated Counter for Stats
-const stats = document.querySelectorAll('.stat h3');
-
 const animateCounter = (element) => {
     const target = element.textContent;
     const isNumber = /^\d+/.test(target);
@@ -128,7 +254,6 @@ const animateCounter = (element) => {
     }
 };
 
-// Trigger counter animation when stats are visible
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px'
@@ -159,14 +284,13 @@ if (contactForm) {
         const button = this.querySelector('button[type="submit"]');
         const originalText = button.textContent;
         
-        // Animate button
         button.textContent = 'Sending...';
         button.style.transform = 'scale(0.95)';
         
-        // Simulate sending (replace with actual form handling)
         setTimeout(() => {
             button.textContent = '✓ Message Sent!';
             button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            playClickSound();
             
             setTimeout(() => {
                 button.textContent = originalText;
@@ -178,7 +302,7 @@ if (contactForm) {
     });
 }
 
-// Skill Tags Hover Effect with Random Colors
+// Skill Tags with Rainbow Colors
 const skillTags = document.querySelectorAll('.tag');
 const colors = [
     'linear-gradient(135deg, #667eea, #764ba2)',
@@ -192,53 +316,7 @@ skillTags.forEach((tag, index) => {
     tag.style.background = colors[index % colors.length];
 });
 
-// Mouse Trail Effect
-let mouseTrail = [];
-const trailLength = 20;
-
-document.addEventListener('mousemove', (e) => {
-    mouseTrail.push({ x: e.clientX, y: e.clientY });
-    
-    if (mouseTrail.length > trailLength) {
-        mouseTrail.shift();
-    }
-});
-
-// Cursor Glow Effect
-const cursor = document.createElement('div');
-cursor.style.cssText = `
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.4), transparent);
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease;
-    display: none;
-`;
-document.body.appendChild(cursor);
-
-// Only show custom cursor on desktop
-if (window.innerWidth > 768) {
-    cursor.style.display = 'block';
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX - 10 + 'px';
-        cursor.style.top = e.clientY - 10 + 'px';
-    });
-    
-    document.querySelectorAll('a, button, .project-card, .skill-category').forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'scale(2)';
-        });
-        element.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'scale(1)';
-        });
-    });
-}
-
-// Add floating animation to random elements
+// Floating Animation
 const floatingElements = document.querySelectorAll('.project-card img, .profile-pic img');
 floatingElements.forEach((el, index) => {
     el.style.animation = `float ${3 + (index * 0.5)}s ease-in-out infinite`;
@@ -268,13 +346,7 @@ projectCards.forEach(card => {
     });
 });
 
-// Skill Category Entrance Animation
-const skillCategories = document.querySelectorAll('.skill-category');
-skillCategories.forEach((category, index) => {
-    category.style.animation = `fadeInUp 0.6s ease-out ${index * 0.2}s both`;
-});
-
-// Add progress bar on scroll
+// Progress Bar on Scroll
 const progressBar = document.createElement('div');
 progressBar.style.cssText = `
     position: fixed;
@@ -294,7 +366,7 @@ window.addEventListener('scroll', () => {
     progressBar.style.width = scrolled + '%';
 });
 
-// Add particle effect to hero section
+// Particle Effect in Hero
 function createParticles() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
@@ -312,12 +384,19 @@ function createParticles() {
             animation: float ${Math.random() * 10 + 5}s ease-in-out infinite;
             animation-delay: ${Math.random() * 5}s;
             pointer-events: none;
+            z-index: 1;
         `;
         hero.appendChild(particle);
     }
 }
 
 createParticles();
+
+// Entrance Animations for Skill Categories
+const skillCategories = document.querySelectorAll('.skill-category');
+skillCategories.forEach((category, index) => {
+    category.style.animation = `fadeInUp 0.6s ease-out ${index * 0.2}s both`;
+});
 
 // Easter egg: Konami code
 let konamiCode = [];
@@ -329,6 +408,7 @@ document.addEventListener('keydown', (e) => {
     
     if (konamiCode.join(',') === konamiSequence.join(',')) {
         document.body.style.animation = 'rainbow 2s linear infinite';
+        playClickSound();
         setTimeout(() => {
             document.body.style.animation = '';
         }, 5000);
@@ -345,5 +425,15 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log('🚀 Portfolio loaded with premium animations!');
-console.log('💡 Tip: Try the Konami code! ↑↑↓↓←→←→BA');
+// Background Video Auto-play with Fallback
+const heroVideo = document.querySelector('.hero-video__media');
+if (heroVideo) {
+    heroVideo.play().catch(() => {
+        // If autoplay fails, hide video
+        heroVideo.style.display = 'none';
+    });
+}
+
+console.log('🚀 Portfolio loaded with ULTIMATE premium features!');
+console.log('💡 Features: Dark Mode, Custom Cursor, Sound Effects, Particles, 3D Tilt');
+console.log('🎮 Easter egg: Try the Konami code! ↑↑↓↓←→←→BA');
