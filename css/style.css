@@ -184,6 +184,48 @@ body.dark .achievement-link:hover {
     color: #a78bfa;
 }
 
+body.dark .blog {
+    background: #0f172a;
+}
+
+body.dark .blog-subtitle {
+    color: #d1d5db;
+}
+
+body.dark .blog-card {
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid #475569;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .blog-card.placeholder {
+    border: 2px dashed #7c3aed;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 1), rgba(51, 65, 85, 1));
+}
+
+body.dark .blog-card:hover {
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.5);
+    border-color: #a78bfa;
+}
+
+body.dark .blog-icon {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+body.dark .blog-card h3 {
+    color: #c4b5fd;
+}
+
+body.dark .blog-desc {
+    color: #e5e7eb;
+}
+
+body.dark .cta-text {
+    color: #22d3ee;
+    background: rgba(34, 211, 238, 0.1);
+}
+
 body.dark .skill-category {
     background: rgba(30, 41, 59, 1);
     border: 2px solid #7c3aed;
@@ -1409,6 +1451,113 @@ html {
 .achievement-link:hover {
     color: #7c3aed;
     gap: 0.8rem;
+}
+
+/* Blog Section */
+.blog {
+    padding: 5rem 0;
+    background: #f8f9fe;
+}
+
+.blog-subtitle {
+    text-align: center;
+    color: #4b5563;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.15);
+    transition: all 0.3s ease;
+    border: 2px solid #e5e7eb;
+    text-align: center;
+}
+
+.blog-card.placeholder {
+    border: 2px dashed #6366f1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(249, 250, 255, 1));
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.25);
+    border-color: #6366f1;
+}
+
+.blog-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4338ca, #7c3aed);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 20px rgba(67, 56, 202, 0.3);
+}
+
+.blog-icon i {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    color: #4338ca;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.blog-desc {
+    color: #1f2937;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.blog-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.topic-tag {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.blog-cta {
+    margin-top: 1rem;
+}
+
+.cta-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4338ca;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(67, 56, 202, 0.1);
+    border-radius: 25px;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 /* CV Section */
