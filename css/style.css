@@ -829,7 +829,7 @@ html {
     background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 50%;
-    z-index: 0;
+    z-index: -1;
 }
 
 .skill-category:hover::before {
@@ -849,7 +849,7 @@ html {
     color: var(--primary-color);
     font-weight: 700;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .skill-tags {
@@ -857,7 +857,7 @@ html {
     flex-wrap: wrap;
     gap: 0.8rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .tag {
