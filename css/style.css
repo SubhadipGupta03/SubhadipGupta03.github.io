@@ -101,28 +101,25 @@ body.dark .theme-toggle:hover {
 }
 
 body.dark .project-card {
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(37, 99, 235, 0.1));
-    border: 2px solid rgba(124, 58, 237, 0.3);
-    box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
-    transition: all 0.4s ease;
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid #7c3aed;
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
 }
 
 body.dark .project-card:hover {
-    border-color: rgba(124, 58, 237, 0.8);
-    box-shadow: 0 0 50px rgba(124, 58, 237, 0.5), 0 0 80px rgba(37, 99, 235, 0.3);
+    border-color: #a78bfa;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.6);
 }
 
 body.dark .skill-category {
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(37, 99, 235, 0.15));
-    border-left: 4px solid #7c3aed;
-    box-shadow: -5px 0 20px rgba(124, 58, 237, 0.3);
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid #7c3aed;
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
 }
 
 body.dark .skill-category:hover {
-    box-shadow: 0 20px 60px rgba(124, 58, 237, 0.5), 
-                0 0 60px rgba(124, 58, 237, 0.3),
-                -5px 0 30px rgba(124, 58, 237, 0.4);
-    border-left-color: #a78bfa;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.6);
+    border-color: #a78bfa;
 }
 
 body.dark .skill-category::before {
@@ -184,13 +181,33 @@ body.dark .stat h3 {
 }
 
 body.dark .section {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.3));
+    background: #0b1020;
+}
+
+body.dark .about {
+    background: #0b1020;
+}
+
+body.dark .skills {
+    background: #0f172a;
+}
+
+body.dark .projects {
+    background: #0b1020;
+}
+
+body.dark .contact {
+    background: #0f172a;
+}
+
+body.dark .cv-section {
+    background: #0b1020;
 }
 
 body.dark .cv-item {
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.25), rgba(37, 99, 235, 0.25));
+    background: rgba(30, 41, 59, 1);
     border-left: 4px solid #06b6d4;
-    box-shadow: -5px 0 20px rgba(6, 182, 212, 0.3);
+    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
 }
 
 body.dark .cv-item h4 {
@@ -729,8 +746,7 @@ html {
 /* About Section */
 .about {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 242, 255, 0.8));
-    backdrop-filter: blur(10px);
+    background: #ffffff;
 }
 
 .about h2,
@@ -824,7 +840,7 @@ html {
 /* Skills Section */
 .skills {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(230, 233, 255, 0.5), rgba(255, 240, 250, 0.5));
+    background: #f8f9fe;
 }
 
 .skills-grid {
@@ -834,16 +850,13 @@ html {
 }
 
 .skill-category {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 255, 0.95));
+    background: #ffffff;
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.15);
+    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(99, 102, 241, 0.1);
-    transform-style: preserve-3d;
-    perspective: 1000px;
+    border: 2px solid #6366f1;
 }
 
 .skill-category::before {
@@ -854,8 +867,8 @@ html {
     transform: translate(-50%, -50%) scale(0);
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+    transition: transform 0.4s ease;
     border-radius: 50%;
     z-index: -1;
 }
@@ -865,10 +878,9 @@ html {
 }
 
 .skill-category:hover {
-    animation: popUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.25), 
-                0 0 40px rgba(99, 102, 241, 0.1);
-    border-color: rgba(99, 102, 241, 0.3);
+    animation: popUp 0.4s ease forwards;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+    border-color: #8b5cf6;
 }
 
 .skill-category h3 {
@@ -907,7 +919,7 @@ html {
 /* Projects Section */
 .projects {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 243, 255, 0.8));
+    background: #ffffff;
 }
 
 .projects-grid {
@@ -917,13 +929,13 @@ html {
 }
 
 .project-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(252, 252, 255, 0.98));
+    background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.15);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
-    border: 1px solid rgba(99, 102, 241, 0.1);
+    border: 2px solid #6366f1;
 }
 
 .project-card::before {
@@ -1048,7 +1060,7 @@ html {
 /* CV Section */
 .cv-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(240, 242, 255, 0.6), rgba(255, 245, 250, 0.6));
+    background: #ffffff;
 }
 
 .cv-content {
@@ -1071,35 +1083,16 @@ html {
 .cv-item {
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 1);
+    background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
-    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.15);
+    transition: box-shadow 0.3s ease;
     position: relative;
-    overflow: hidden;
-    border-left: 4px solid transparent;
-    border-image: linear-gradient(135deg, #6366f1, #8b5cf6) 1;
-}
-
-.cv-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: var(--gradient);
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
-}
-
-.cv-item:hover::before {
-    transform: scaleY(1);
+    border-left: 4px solid #6366f1;
 }
 
 .cv-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
 }
 
 .cv-item h4 {
@@ -1149,7 +1142,7 @@ html {
 /* Contact Section */
 .contact {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(235, 240, 255, 0.85));
+    background: #f8f9fe;
 }
 
 .contact-subtitle {
