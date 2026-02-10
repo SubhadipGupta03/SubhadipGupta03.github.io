@@ -206,8 +206,8 @@ body.dark .cv-section {
 
 body.dark .cv-item {
     background: rgba(30, 41, 59, 1);
-    border-left: 4px solid #06b6d4;
-    box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+    border-left: 5px solid #22d3ee;
+    box-shadow: 0 5px 20px rgba(34, 211, 238, 0.4);
 }
 
 body.dark .cv-item h4 {
@@ -217,17 +217,18 @@ body.dark .cv-item h4 {
 }
 
 body.dark .cv-item .date {
-    color: #06b6d4 !important;
+    color: #22d3ee !important;
     font-weight: 900;
+    font-size: 1rem;
 }
 
 body.dark .cv-item p {
-    color: #e5e7eb !important;
+    color: #f3f4f6 !important;
     font-weight: 600;
 }
 
 body.dark .cv-item li {
-    color: #e5e7eb !important;
+    color: #f3f4f6 !important;
     font-weight: 600;
 }
 
@@ -237,9 +238,13 @@ body.dark .cv-item strong {
 }
 
 body.dark .cv-column h3 {
-    color: #a78bfa !important;
-    text-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+    color: #c4b5fd !important;
+    text-shadow: 0 0 25px rgba(167, 139, 250, 0.9);
     font-weight: 900;
+}
+
+body.dark .cv-column h3 i {
+    color: #c4b5fd !important;
 }
 
 body.dark .contact-form {
@@ -757,11 +762,8 @@ html {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 3rem;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 800;
+    color: #312e81;
+    font-weight: 900;
 }
 
 .about-content {
@@ -1060,7 +1062,7 @@ html {
 /* CV Section */
 .cv-section {
     padding: 5rem 0;
-    background: #ffffff;
+    background: #f8f9fe;
 }
 
 .cv-content {
@@ -1073,11 +1075,15 @@ html {
 .cv-column h3 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: #4338ca;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-weight: 800;
+    font-weight: 900;
+}
+
+.cv-column h3 i {
+    color: #4338ca;
 }
 
 .cv-item {
@@ -1085,33 +1091,33 @@ html {
     padding: 2rem;
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 5px 15px rgba(67, 56, 202, 0.2);
     transition: box-shadow 0.3s ease;
     position: relative;
-    border-left: 4px solid #6366f1;
+    border-left: 5px solid #4338ca;
 }
 
 .cv-item:hover {
-    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+    box-shadow: 0 8px 25px rgba(67, 56, 202, 0.35);
 }
 
 .cv-item h4 {
-    color: #1f2937;
+    color: #111827;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .cv-item .date {
-    color: var(--primary-color);
-    font-weight: 800;
-    font-size: 0.95rem;
+    color: #4338ca;
+    font-weight: 900;
+    font-size: 1rem;
 }
 
 .cv-item p {
-    color: #374151;
+    color: #1f2937;
     margin: 0.5rem 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cv-item ul {
@@ -1120,14 +1126,14 @@ html {
 }
 
 .cv-item li {
-    color: #374151;
+    color: #1f2937;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cv-item strong {
-    color: #1f2937;
-    font-weight: 800;
+    color: #111827;
+    font-weight: 900;
 }
 
 .cv-download {
