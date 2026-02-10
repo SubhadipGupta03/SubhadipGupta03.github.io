@@ -398,6 +398,33 @@ body.dark .highlight-badge p {
     color: #9ca3af;
 }
 
+body.dark .availability h3 {
+    color: #c4b5fd;
+}
+
+body.dark .availability-card {
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid rgba(124, 58, 237, 0.35);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.25);
+}
+
+body.dark .availability-card:hover {
+    border-color: #a78bfa;
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
+}
+
+body.dark .availability-card h4 {
+    color: #f3f4f6;
+}
+
+body.dark .availability-card i {
+    color: #22d3ee;
+}
+
+body.dark .availability-card p {
+    color: #d1d5db;
+}
+
 body.dark .cv-section {
     background: #0b1020;
 }
@@ -1944,6 +1971,62 @@ html {
     font-weight: 500;
 }
 
+.availability {
+    margin: 0 auto 3rem;
+    max-width: 1100px;
+}
+
+.availability h3 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #312e81;
+    margin-bottom: 1.5rem;
+}
+
+.availability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.availability-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.6rem;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.availability-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.45);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.2);
+}
+
+.availability-card h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #111827;
+    font-weight: 800;
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+}
+
+.availability-card i {
+    color: #6366f1;
+    font-size: 1.2rem;
+}
+
+.availability-card p {
+    color: #4b5563;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.6;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2109,6 +2192,10 @@ html {
     }
 
     .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .availability-grid {
         grid-template-columns: 1fr;
     }
 
