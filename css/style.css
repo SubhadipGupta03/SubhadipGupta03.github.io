@@ -311,6 +311,33 @@ body.dark .contact {
     background: #0f172a;
 }
 
+body.dark .contact-subtitle {
+    color: #d1d5db;
+}
+
+body.dark .highlight-badge {
+    background: rgba(30, 41, 59, 1);
+    border: 2px solid #7c3aed;
+    box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4);
+}
+
+body.dark .highlight-badge:hover {
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.6);
+    border-color: #a78bfa;
+}
+
+body.dark .highlight-badge i {
+    color: #a78bfa;
+}
+
+body.dark .highlight-badge span {
+    color: #f3f4f6;
+}
+
+body.dark .highlight-badge p {
+    color: #9ca3af;
+}
+
 body.dark .cv-section {
     background: #0b1020;
 }
@@ -1478,9 +1505,57 @@ html {
 
 .contact-subtitle {
     text-align: center;
-    color: var(--text-light);
+    color: #4b5563;
     font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.contact-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.highlight-badge {
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.15);
+    border: 2px solid #6366f1;
+    text-align: center;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.highlight-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
+    border-color: #8b5cf6;
+}
+
+.highlight-badge i {
+    font-size: 2rem;
+    color: #4338ca;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.highlight-badge span {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 0.3rem;
+}
+
+.highlight-badge p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 0;
+    font-weight: 500;
 }
 
 .contact-content {
