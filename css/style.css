@@ -135,6 +135,11 @@ body.dark .btn-github:hover {
     box-shadow: 0 5px 25px rgba(167, 139, 250, 0.4);
 }
 
+body.dark .badge-coming-soon {
+    background: linear-gradient(135deg, #fb923c, #f97316);
+    box-shadow: 0 5px 20px rgba(251, 146, 60, 0.5);
+}
+
 body.dark .skill-category {
     background: rgba(30, 41, 59, 1);
     border: 2px solid #7c3aed;
@@ -1214,6 +1219,34 @@ html {
     color: #6366f1;
     box-shadow: 0 5px 20px rgba(99, 102, 241, 0.2);
     transform: translateY(-3px);
+}
+
+.badge-coming-soon {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+    cursor: default;
+}
+
+.badge-coming-soon i {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* CV Section */
