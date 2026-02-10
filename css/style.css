@@ -326,6 +326,10 @@ body.dark .stat {
     box-shadow: 0 0 25px rgba(124, 58, 237, 0.2);
 }
 
+body.dark .stat::after {
+    background: radial-gradient(circle at top, rgba(34, 211, 238, 0.2), transparent 60%);
+}
+
 body.dark .stat h3 {
     background: linear-gradient(135deg, #22d3ee, #06b6d4);
     -webkit-background-clip: text;
@@ -345,6 +349,14 @@ body.dark .section {
 
 body.dark .about {
     background: #0b1020;
+}
+
+body.dark .about-text p {
+    color: #d1d5db;
+}
+
+body.dark .about-text p strong {
+    color: #22d3ee;
 }
 
 body.dark .skills {
@@ -1060,21 +1072,31 @@ html {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-text {
+    max-width: 620px;
 }
 
 .about-text p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
     color: var(--text-light);
-    line-height: 1.8;
-    font-size: 1.05rem;
+    line-height: 1.9;
+    font-size: 1.08rem;
+}
+
+.about-text p strong {
+    color: #4338ca;
+    font-weight: 800;
 }
 
 .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    align-items: stretch;
 }
 
 .stat {
@@ -1091,6 +1113,25 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.stat:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.stat:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.stat::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
 }
 
 .stat::before {
@@ -1115,6 +1156,10 @@ html {
     border-color: rgba(99, 102, 241, 0.4);
 }
 
+.stat:hover::after {
+    opacity: 1;
+}
+
 .stat h3 {
     font-size: 3rem;
     background: var(--gradient);
@@ -1124,6 +1169,8 @@ html {
     margin-bottom: 0.8rem;
     font-weight: 900;
     letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
 }
 
 .stat h3.stat-split {
@@ -1160,6 +1207,8 @@ html {
     font-weight: 700;
     font-size: 1.05rem;
     letter-spacing: 0.3px;
+    position: relative;
+    z-index: 1;
 }
 }
 
