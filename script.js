@@ -327,21 +327,40 @@ floatingElements.forEach((el, index) => {
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
+    let frameId = null;
+    let lastX = 0;
+    let lastY = 0;
+
+    const updateTilt = () => {
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
+        const x = lastX - rect.left;
+        const y = lastY - rect.top;
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-        
+
+        // Higher sensitivity for faster response
+        const rotateX = (y - centerY) / 7;
+        const rotateY = (centerX - x) / 7;
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
+        frameId = null;
+    };
+
+    card.addEventListener('mouseenter', () => {
+        card.style.transition = 'none';
     });
-    
+
+    card.addEventListener('mousemove', (e) => {
+        lastX = e.clientX;
+        lastY = e.clientY;
+        if (!frameId) {
+            frameId = requestAnimationFrame(updateTilt);
+        }
+    });
+
     card.addEventListener('mouseleave', () => {
+        card.style.transition = '';
         card.style.transform = '';
     });
 });
