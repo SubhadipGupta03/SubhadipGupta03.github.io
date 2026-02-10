@@ -1147,7 +1147,12 @@ html {
 }
 
 .stat h3.stat-split span:last-child {
-    font-size: 3.2rem;
+    font-size: 2.9rem;
+}
+
+.stat.stat-graduation {
+    min-height: 255px;
+    padding: 3rem 2.5rem;
 }
 
 .stat p {
@@ -2100,7 +2105,12 @@ html {
     }
 
     .stat h3.stat-split span:last-child {
-        font-size: 2.6rem;
+        font-size: 2.3rem;
+    }
+
+    .stat.stat-graduation {
+        min-height: 220px;
+        padding: 2rem 1.7rem;
     }
 
     .profile-pic img {
