@@ -427,6 +427,58 @@ body.dark .cv-column h3 i {
     color: #c4b5fd !important;
 }
 
+/* Dark Mode - Date Badge */
+body.dark .date-badge {
+    background: linear-gradient(135deg, #a78bfa, #c4b5fd);
+    color: #0b1020;
+    box-shadow: 0 4px 15px rgba(167, 139, 250, 0.6);
+}
+
+body.dark .date-badge.featured {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #0b1020;
+    box-shadow: 0 4px 18px rgba(251, 191, 36, 0.7);
+}
+
+body.dark .date-badge.current {
+    background: linear-gradient(135deg, #34d399, #10b981);
+    color: #0b1020;
+    box-shadow: 0 4px 18px rgba(52, 211, 153, 0.7);
+}
+
+/* Dark Mode - Corner Accent */
+body.dark .cv-corner-accent {
+    background: linear-gradient(135deg, #7c3aed, #a78bfa);
+    opacity: 0.25;
+}
+
+body.dark .cv-item:hover .cv-corner-accent {
+    opacity: 0.4;
+}
+
+/* Dark Mode - Institution */
+body.dark .institution {
+    color: #22d3ee !important;
+    font-weight: 700;
+}
+
+body.dark .institution i {
+    color: #a78bfa !important;
+}
+
+/* Dark Mode - CV Details */
+body.dark .cv-details {
+    border-top: 2px solid rgba(167, 139, 250, 0.2);
+}
+
+/* Dark Mode - Highlight Text */
+body.dark .highlight-text {
+    background: linear-gradient(135deg, #22d3ee, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 body.dark .contact-form {
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(37, 99, 235, 0.08));
     border: 2px solid rgba(124, 58, 237, 0.3);
@@ -1635,6 +1687,91 @@ html {
 .cv-item strong {
     color: #111827;
     font-weight: 900;
+}
+
+/* Date Badge Styling */
+.date-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    z-index: 2;
+    transition: all 0.3s ease;
+    animation: subtleGlow 3s ease-in-out infinite;
+}
+
+.date-badge.featured {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.5);
+}
+
+.date-badge.current {
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.5);
+}
+
+.cv-item:hover .date-badge {
+    transform: scale(1.05);
+}
+
+/* Corner Accent Decoration */
+.cv-corner-accent {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4338ca, #6366f1);
+    border-radius: 15px 0;
+    opacity: 0.2;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.cv-item:hover .cv-corner-accent {
+    opacity: 0.35;
+    width: 70px;
+    height: 70px;
+}
+
+/* Institution Label */
+.institution {
+    color: #6366f1;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.institution i {
+    color: #8b5cf6;
+    font-size: 1.1rem;
+}
+
+/* CV Details Container */
+.cv-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(99, 102, 241, 0.1);
+}
+
+/* Highlight Text */
+.highlight-text {
+    color: #6366f1;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.05em;
 }
 
 .cv-download {
