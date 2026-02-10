@@ -394,6 +394,7 @@ body.dark .cv-item h4 {
     color: #f9fafb !important;
     text-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
     font-weight: 900;
+    padding-right: 150px;
 }
 
 body.dark .cv-item .date {
@@ -460,6 +461,7 @@ body.dark .cv-item:hover .cv-corner-accent {
 body.dark .institution {
     color: #22d3ee !important;
     font-weight: 700;
+    padding-right: 150px;
 }
 
 body.dark .institution i {
@@ -1659,6 +1661,7 @@ html {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: 900;
+    padding-right: 150px;
 }
 
 .cv-item .date {
@@ -1749,6 +1752,7 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    padding-right: 150px;
 }
 
 .institution i {
