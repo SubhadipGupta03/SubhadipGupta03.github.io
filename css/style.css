@@ -22,7 +22,7 @@ body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--white);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     overflow-x: hidden;
 }
 
@@ -312,16 +312,17 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 255, 0.95));
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(99, 102, 241, 0.12);
     z-index: 1000;
     transition: var(--transition);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 243, 255, 0.98));
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.18);
 }
 
 .nav-content {
@@ -677,7 +678,8 @@ html {
 /* About Section */
 .about {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 242, 255, 0.8));
+    backdrop-filter: blur(10px);
 }
 
 .about h2,
@@ -718,12 +720,13 @@ html {
 .stat {
     text-align: center;
     padding: 2.5rem;
-    background: var(--white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 255, 0.95));
     border-radius: 20px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.12);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.15);
 }
 
 .stat::before {
@@ -765,6 +768,7 @@ html {
 /* Skills Section */
 .skills {
     padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(230, 233, 255, 0.5), rgba(255, 240, 250, 0.5));
 }
 
 .skills-grid {
@@ -774,13 +778,14 @@ html {
 }
 
 .skill-category {
-    background: var(--white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 255, 0.95));
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .skill-category::before {
@@ -837,7 +842,7 @@ html {
 /* Projects Section */
 .projects {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 243, 255, 0.8));
 }
 
 .projects-grid {
@@ -847,12 +852,13 @@ html {
 }
 
 .project-card {
-    background: var(--white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(252, 252, 255, 0.98));
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
+    border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .project-card::before {
@@ -977,6 +983,7 @@ html {
 /* CV Section */
 .cv-section {
     padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(240, 242, 255, 0.6), rgba(255, 245, 250, 0.6));
 }
 
 .cv-content {
@@ -999,12 +1006,14 @@ html {
 .cv-item {
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background: var(--white);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 252, 255, 0.95));
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    border-left: 4px solid transparent;
+    border-image: linear-gradient(135deg, #6366f1, #8b5cf6) 1;
 }
 
 .cv-item::before {
@@ -1068,7 +1077,7 @@ html {
 /* Contact Section */
 .contact {
     padding: 5rem 0;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(235, 240, 255, 0.85));
 }
 
 .contact-subtitle {
