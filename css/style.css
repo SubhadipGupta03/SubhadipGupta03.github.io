@@ -1037,13 +1037,13 @@ html {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .cv-item {
     margin-bottom: 2.5rem;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 252, 255, 0.95));
+    background: rgba(255, 255, 255, 1);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
     transition: var(--transition);
@@ -1075,21 +1075,22 @@ html {
 }
 
 .cv-item h4 {
-    color: var(--text-dark);
+    color: #1f2937;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .cv-item .date {
     color: var(--primary-color);
-    font-weight: 700;
+    font-weight: 800;
     font-size: 0.95rem;
 }
 
 .cv-item p {
-    color: var(--text-light);
+    color: #374151;
     margin: 0.5rem 0;
+    font-weight: 500;
 }
 
 .cv-item ul {
@@ -1098,8 +1099,14 @@ html {
 }
 
 .cv-item li {
-    color: var(--text-light);
+    color: #374151;
     margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.cv-item strong {
+    color: #1f2937;
+    font-weight: 800;
 }
 
 .cv-download {
