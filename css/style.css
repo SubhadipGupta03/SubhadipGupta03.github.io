@@ -1094,10 +1094,17 @@ html {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
     gap: 2rem;
     align-items: stretch;
     justify-items: stretch;
+}
+
+.about-stats .stat:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 260px;
+    width: 100%;
 }
 
 .stat {
