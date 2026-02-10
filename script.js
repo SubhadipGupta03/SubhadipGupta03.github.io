@@ -425,15 +425,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Background Video Auto-play with Fallback
-const heroVideo = document.querySelector('.hero-video__media');
-if (heroVideo) {
-    heroVideo.play().catch(() => {
-        // If autoplay fails, hide video
-        heroVideo.style.display = 'none';
-    });
-}
-
 console.log('🚀 Portfolio loaded with ULTIMATE premium features!');
 console.log('💡 Features: Dark Mode, Custom Cursor, Sound Effects, Particles, 3D Tilt');
 console.log('🎮 Easter egg: Try the Konami code! ↑↑↓↓←→←→BA');
