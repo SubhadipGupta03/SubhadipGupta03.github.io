@@ -188,13 +188,41 @@ body.dark .section {
 }
 
 body.dark .cv-item {
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(37, 99, 235, 0.1));
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.25), rgba(37, 99, 235, 0.25));
     border-left: 4px solid #06b6d4;
     box-shadow: -5px 0 20px rgba(6, 182, 212, 0.3);
 }
 
 body.dark .cv-item h4 {
+    color: #f9fafb !important;
     text-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+    font-weight: 900;
+}
+
+body.dark .cv-item .date {
+    color: #06b6d4 !important;
+    font-weight: 900;
+}
+
+body.dark .cv-item p {
+    color: #e5e7eb !important;
+    font-weight: 600;
+}
+
+body.dark .cv-item li {
+    color: #e5e7eb !important;
+    font-weight: 600;
+}
+
+body.dark .cv-item strong {
+    color: #f9fafb !important;
+    font-weight: 900;
+}
+
+body.dark .cv-column h3 {
+    color: #a78bfa !important;
+    text-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+    font-weight: 900;
 }
 
 body.dark .contact-form {
