@@ -1122,6 +1122,18 @@ html {
     letter-spacing: -1px;
 }
 
+.stat h3.stat-split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.05;
+    font-size: 2.6rem;
+}
+
+.stat h3.stat-split span {
+    display: block;
+}
+
 .stat p {
     color: #1f2937;
     font-weight: 700;
@@ -2060,6 +2072,10 @@ html {
 
     .stat h3 {
         font-size: 2rem;
+    }
+
+    .stat h3.stat-split {
+        font-size: 2.2rem;
     }
 
     .profile-pic img {
