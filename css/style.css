@@ -111,6 +111,30 @@ body.dark .project-card:hover {
     box-shadow: 0 10px 30px rgba(124, 58, 237, 0.6);
 }
 
+body.dark .btn-live {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.5);
+}
+
+body.dark .btn-live:hover {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.7);
+}
+
+body.dark .btn-github {
+    background: rgba(30, 41, 59, 1);
+    color: #e5e7eb;
+    border: 2px solid #475569;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .btn-github:hover {
+    background: rgba(51, 65, 85, 1);
+    border-color: #a78bfa;
+    color: #a78bfa;
+    box-shadow: 0 5px 25px rgba(167, 139, 250, 0.4);
+}
+
 body.dark .skill-category {
     background: rgba(30, 41, 59, 1);
     border: 2px solid #7c3aed;
@@ -1149,31 +1173,47 @@ html {
 
 .project-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-links a {
-    color: var(--primary-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
     font-size: 0.95rem;
-    transition: var(--transition);
-    position: relative;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.project-links a::after {
-    content: '→';
-    margin-left: 5px;
-    display: inline-block;
-    transition: transform 0.3s ease;
+.btn-live {
+    background: linear-gradient(135deg, #4338ca, #7c3aed);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(67, 56, 202, 0.3);
 }
 
-.project-links a:hover {
-    color: var(--secondary-color);
+.btn-live:hover {
+    background: linear-gradient(135deg, #3730a3, #6d28d9);
+    box-shadow: 0 8px 25px rgba(67, 56, 202, 0.5);
+    transform: translateY(-3px);
 }
 
-.project-links a:hover::after {
-    transform: translateX(5px);
+.btn-github {
+    background: #ffffff;
+    color: #1f2937;
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-github:hover {
+    background: #f9fafb;
+    border-color: #6366f1;
+    color: #6366f1;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.2);
+    transform: translateY(-3px);
 }
 
 /* CV Section */
