@@ -1079,7 +1079,7 @@ html {
 
 .stat {
     text-align: center;
-    padding: 2.5rem;
+    padding: 2.6rem 2.5rem;
     background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
@@ -1087,6 +1087,10 @@ html {
     position: relative;
     overflow: hidden;
     border: 2px solid rgba(99, 102, 241, 0.2);
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stat::before {
@@ -1126,10 +1130,10 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.08;
-    font-size: 2.85rem;
+    line-height: 1.15;
+    font-size: 2.75rem;
     letter-spacing: 0;
-    gap: 0.15rem;
+    gap: 0.25rem;
     text-align: center;
     width: 100%;
 }
@@ -2071,7 +2075,8 @@ html {
     }
 
     .stat {
-        padding: 1.5rem;
+        padding: 1.7rem;
+        min-height: 200px;
     }
 
     .stat h3 {
@@ -2079,7 +2084,7 @@ html {
     }
 
     .stat h3.stat-split {
-        font-size: 2.4rem;
+        font-size: 2.25rem;
     }
 
     .profile-pic img {
