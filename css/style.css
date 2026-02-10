@@ -1071,7 +1071,7 @@ html {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.15fr 1fr;
     gap: 4rem;
     align-items: start;
 }
@@ -1094,9 +1094,10 @@ html {
 
 .about-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
     gap: 2rem;
     align-items: stretch;
+    justify-items: stretch;
 }
 
 .stat {
