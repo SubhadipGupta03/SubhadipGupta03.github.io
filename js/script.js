@@ -319,22 +319,31 @@ revealElements.forEach((el, index) => {
     el.style.transitionDelay = `${index * 0.1}s`;
 });
 
-// Typing Effect for Hero Section
+// Enhanced Typing Effect for Hero Section
 const subtitle = document.querySelector('.subtitle');
 if (subtitle) {
     const text = subtitle.textContent;
     subtitle.textContent = '';
+    subtitle.style.opacity = '1';
     let i = 0;
     
     const typeWriter = () => {
         if (i < text.length) {
             subtitle.textContent += text.charAt(i);
             i++;
-            setTimeout(typeWriter, 50);
+            setTimeout(typeWriter, 80);
+        } else {
+            // Keep cursor blinking after typing is complete
+            setTimeout(() => {
+                const cursor = subtitle.querySelector('::after');
+                if (cursor) {
+                    cursor.style.animation = 'blink 0.7s infinite';
+                }
+            }, 500);
         }
     };
     
-    setTimeout(typeWriter, 1000);
+    setTimeout(typeWriter, 1200);
 }
 
 // Parallax Effect for Hero Section
